@@ -71,8 +71,9 @@ class CharsValidator:
         return len([el for el in string if el not in self.chars]) == 0
 
 
-lg = LoginForm("Вход на сайт", validators=[LengthValidator(3, 50), CharsValidator(ascii_lowercase + digits)])
-lg.post({"login": "root", "password": "panda"})
-if lg.is_validate():
-    print("Дальнейшая обработка данных формы")
+if __name__ == '__main__':
+    lg = LoginForm("Вход на сайт", validators=[LengthValidator(3, 50), CharsValidator(ascii_lowercase + digits)])
+    lg.post({"login": "root", "password": "panda"})
+    if lg.is_validate():
+        print("Дальнейшая обработка данных формы")
 
