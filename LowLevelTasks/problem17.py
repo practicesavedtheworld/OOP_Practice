@@ -26,7 +26,7 @@ acceptor12 = acceptor1 + acceptor2
 
 class FileAcceptor:
     def __init__(self, *args):
-        self.name = args
+        self.name = tuple(set(args))
 
     def __call__(self, fr):
         a = fr[-1*int(fr[::-1].find('.')):]
