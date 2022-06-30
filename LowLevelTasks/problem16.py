@@ -12,13 +12,13 @@ class Dimensions:
         return self.a *self.b*self.c
 
     def __ge__(self, other):
-        return self.__len__() >= other.__len__()
+        return self.__len__() >= other.__len__
 
     def __le__(self, other):
-        return self.__len__() <= other.__len__()
+        return self.__len__() <= other.__len__
 
     def __lt__(self, other):
-        return self.__len__() < other.__len__()
+        return self.__len__() < other.__len__
 
     @property
     def c(self):
@@ -61,4 +61,4 @@ if __name__ == '__main__':
     item3 = ShopItem('холодильник', 40000, Dimensions(2000, 600, 500))
     item4 = ShopItem('табуретка', 2000.99, Dimensions(500, 200, 200))
     lst_shop = [item1, item2, item3, item4]
-    lst_shop_sorted = sorted(lst_shop, key=lambda x: x.dim.__len__()) == sorted(lst_shop, key=lambda x: x.dim)
+    lst_shop_sorted = sorted(lst_shop, key=lambda x: x.dim.__len__) == sorted(lst_shop, key=lambda x: x.dim)
