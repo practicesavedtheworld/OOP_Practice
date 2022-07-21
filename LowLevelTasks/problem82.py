@@ -1,4 +1,5 @@
 """
+<<<<<<< HEAD
 Объявите в программе класс Person, объекты которого создаются командой:
 
 p = Person(fio, job, old, salary, year_job)
@@ -61,3 +62,4 @@ if __name__ == '__main__':
     for v in pers:
         print(v)
     pers[5] = 123  # IndexError
+
